@@ -1,29 +1,33 @@
+// Imports the Express framework so it can be used to create routes.
 var express = require('express');
+
+// Creates a router to organize and manage the website's page routes.
 var router = express.Router();
 
-/* GET home page. */
+// The root route displays the Home page.
 router.get('/', function(req, res, next) {
   res.render('layouts/layout', { title: 'Home', page: 'index' });
 });
 
-/* GET home page using /home. */
+// Displays the Home page when the user visits /home.
 router.get('/home', function(req, res, next) {
   res.render('layouts/layout', { title: 'Home', page: 'index' });
 });
 
-/* GET about me page. */
+// Displays the About Me page.
 router.get('/about', function(req, res, next) {
   res.render('layouts/layout', { title: 'About Me', page: 'about' });
 });
 
-/* GET projects page. */
+// Displays the Projects page.
 router.get('/projects', function(req, res, next) {
   res.render('layouts/layout', { title: 'Projects', page: 'projects' });
 });
 
-/* GET contact me page. */
+// Displays the Contact Me page.
 router.get('/contact', function(req, res, next) {
   res.render('layouts/layout', { title: 'Contact Me', page: 'contact' });
 });
 
+// Makes the router available to the main Express application.
 module.exports = router;

@@ -2,26 +2,36 @@
 <html lang="en">
 
 <head>
+  <!-- Sets the character encoding and makes the website responsive on different screen sizes. -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Displays the current page title which is passed from the Express route. -->
   <title><%= title %></title>
 
+  <!-- Links Bootstrap, Font Awesome, and app.css. -->
   <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="/Content/app.css">
 
+  <!-- Loads the portfolio JavaScript and Bootstrap JavaScript bundle. -->
   <script src="/Script/app.js" defer></script>
   <script src="/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
 </head>
 
-<body>
+<!-- Uses Bootstrap flexbox classes to keep the footer at the bottom of the page. -->
+<body class="d-flex flex-column min-vh-100">
 
+   <!-- Includes the shared navigation bar on every page. -->
   <%- include('../partials/header') %>
 
+  <!-- Loads the page content selected by the Express route. -->
   <%- include('../' + page) %>
 
-  <%- include('../partials/footer') %>
+  <!-- Pushes the shared footer to the bottom of the page. -->
+  <div class="mt-auto">
+    <%- include('../partials/footer') %>
+  </div>
 
 </body>
 </html>

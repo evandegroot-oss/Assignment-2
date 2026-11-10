@@ -1,11 +1,45 @@
+<!-- Creates the main container and adds spacing above the About Me content. -->
 <div class="container mt-3">
 
-  <h1><%= title %></h1>
+  <!-- Creates a centred Bootstrap card with a light grey background and maximum width of 800px. -->
+  <div class="card mx-auto mb-3 bg-light" style="max-width: 800px;">
 
-  <h2>Who I Am</h2>
+    <!-- Creates a Bootstrap row to position the video and text side by side. -->
+    <div class="row g-0">
 
-  <p>My name is Evan DeGroot, and I am a Networking and Information Technology Security student at Ontario Tech University.</p>
+      <!-- Uses four columns on medium and larger screens for the video. -->
+      <div class="col-md-4">
+        <video class="img-fluid rounded-start" controls>
+          <!-- Loads the MP4 video from the public Assets folder. -->
+          <source src="/Assets/videos/IMG_6137.mp4" type="video/mp4">
+        </video>
+      </div>
 
-  <p>I am currently in the second year of my program at Ontario Tech University. I have just completed midterms for the first semester and am now preparing for final exams while working on various projects.</p>
+      <!-- Uses eight columns for the About Me information. -->
+      <div class="col-md-8">
+        <div class="card-body">
 
+          <!-- Main heading for the About Me page. -->
+          <h1 class="card-title">About Me</h1>
+
+          <!-- Introduces the portfolio owner. -->
+          <h2>Who I Am</h2>
+          <p>
+            My name is Evan DeGroot, and I am a Networking and Information
+            Technology Security student at Ontario Tech University.
+          </p>
+
+          <!-- Provides information about the owner's education. -->
+          <h2>My Education</h2>
+          <p>
+            I am currently in the second year of my program at Ontario Tech
+            University. I have just completed midterms for the first semester
+            and am now preparing for final exams while working on various projects.
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>

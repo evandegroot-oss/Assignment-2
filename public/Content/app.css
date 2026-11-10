@@ -1,0 +1,5 @@
+/* Custom styling for portfolio cards */
+.card {
+    border: 1px solid aliceblue;
+    border-radius: 10px;
+}

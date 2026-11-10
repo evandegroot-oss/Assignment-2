@@ -1,14 +1,20 @@
+<!-- Creates the responsive Bootstrap nav bar with a dark background. -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
+
+    <!-- Website brand name that links back to the Home page. -->
     <a class="navbar-brand" href="/home">Evan DeGroot</a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Creates the collapsible nav button for smaller screens. -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle nav">
       <span class="navbar-toggler-icon"></span>
     </button>
 
+    <!-- Contains the nav links and allows them to collapse on smaller screens. -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
+        <!-- Home nav link. The EJS condition highlights it when Home is the current page. -->
         <li class="nav-item">
           <% if (title == 'Home') { %>
             <a class="nav-link active" href="/home"><i class="fa-solid fa-house"></i> Home</a>
@@ -17,6 +23,7 @@
           <% } %>
         </li>
 
+        <!-- About Me nav link. -->
         <li class="nav-item">
           <% if (title == 'About Me') { %>
             <a class="nav-link active" href="/about"><i class="fa-solid fa-circle-info"></i> About Me</a>
@@ -25,6 +32,7 @@
           <% } %>
         </li>
 
+        <!-- Projects nav link. -->
         <li class="nav-item">
           <% if (title == 'Projects') { %>
             <a class="nav-link active" href="/projects"><i class="fa-solid fa-diagram-project"></i> Projects</a>
@@ -33,6 +41,7 @@
           <% } %>
         </li>
 
+        <!-- Contact Me nav link. -->
         <li class="nav-item">
           <% if (title == 'Contact Me') { %>
             <a class="nav-link active" href="/contact"><i class="fa-regular fa-address-book"></i> Contact Me</a>

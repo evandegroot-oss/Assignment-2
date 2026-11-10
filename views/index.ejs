@@ -1,11 +1,37 @@
+<!-- Creates the main container and adds spacing above the Home page content. -->
 <div class="container mt-3">
 
-  <h1>Welcome to My Portfolio</h1>
+  <!-- Creates a centred Bootstrap card with a light grey background and maximum width of 800px. -->
+  <div class="card mx-auto mb-3 bg-light" style="max-width: 800px;">
 
-  <h2>I'm Evan DeGroot</h2>
+    <!-- Creates a Bootstrap row to position the image and text side by side. -->
+    <div class="row g-0">
 
-  <p>I am a Networking and Information Technology Security student at Ontario Tech University.</p>
+      <!-- Uses four columns on medium and larger screens for the profile image. -->
+      <div class="col-md-4">
+        <img src="/Assets/images/image.jpg" class="img-fluid rounded-start" alt="Photo">
+      </div>
 
-  <p>This portfolio showcases my work in Networking and It</p>
-  
+      <!-- Uses eight columns for the introduction text. -->
+      <div class="col-md-8">
+        <div class="card-body">
+
+          <!-- Displays the portfolio owner's name. -->
+          <h5 class="card-title">Evan DeGroot</h5>
+
+          <!-- Introduces the owner's university program. -->
+          <p class="lead">
+            I am a Networking and Information Technology Security student at Ontario Tech University.
+          </p>
+
+          <!-- Briefly describes the purpose of the portfolio. -->
+          <p class="card-text">
+            This portfolio showcases my academic work and projects in networking, information technology, and security.
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>
